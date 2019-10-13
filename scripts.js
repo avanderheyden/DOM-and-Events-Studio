@@ -1,6 +1,9 @@
 // Write your JavaScript code here.
 window.addEventListener('load', function() {
     console.log("Page is loaded");
+
+//take off button function://
+this.document.getElementById("takeoff").onclick= function() {
 //change flight status to "shutttle is in flight"//
     let flightStatus= document.getElementById("flightStatus");
     document.getElementById("flightStatus").innerHTML= "Shuttle in flight!";
@@ -16,6 +19,7 @@ window.addEventListener('load', function() {
     let shuttleHeight=
     document.getElementById('spaceShuttleHeight').innerHTML="10,000";
 // Remember to pay attention to page loading!
+}
 });
 // function handleClick("Ready") {
 //     alert("Confirm that the shuttle is ready for liftoff");

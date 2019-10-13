@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Window Load Event</title>
+        <script>
+        window.addEventListener('load', function() {
+            console.log("Page is loaded");
+        });
+        </script>
         <title>Flight Simulator</title>
         <link rel = "stylesheet" type = "text/css" href = "styles.css" />
         <script src = "scripts.js"></script>
@@ -9,7 +15,7 @@
         <div style="text-align: center;">
             <h1>Flight Simulator</h1>
             <h2>Current Flight Status</h2>
-            <p id = "flightStatus">Space shuttle ready for takeoff</p>
+            <p id = "flightStatus" onclick= "Shuttle in flight"; >Space shuttle ready for takeoff</p>
             <h2>Shuttle Trajectory</h2>
         </div>
         <div style="text-align: center; height: 400px; width: 100%;" >
@@ -19,7 +25,7 @@
                 <h3>Astronaut Chat</h3>
                 <p>Houston, we are ready when you are!</p>
             </div>
-            <div id = "shuttleBackground" style = "position: relative;">
+            <div id = "shuttleBackground" style = "position: relative;" onclick="handleClick('color')">
                 <img src = "LaunchCode_rocketline_white.png" height = "75" width = "75" id = "rocket"/>
             </div>
             <div style = "text-align: center; display: inline-block;">
@@ -32,9 +38,11 @@
             </div>
         </div>
         <div style="text-align: center;">
-            <button id = "takeoff">Take off</button>
+            <button id = "takeoff" onclick = "handleClick('ready')">Take off</button>
             <button id = "landing">Land</button>
             <button id = "missionAbort">Abort Mission</button>
     </div>
     </body>
 </html>
+
+<!-- window.addEventListener("click", function handleClick(){}) -->

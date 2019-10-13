@@ -6,8 +6,12 @@ let flightStatus= document.getElementById("flightStatus");
 document.getElementById("flightStatus").innerHTML= "Shuttle in flight!";
 console.log(flightStatus.innerHTML);
 //window: "Confirm that the shuttle is ready for takeoff."//
+let takeOffButton= document.getElementById("takeoff");
 document.getElementById("takeoff").addEventListener("click",function(){alert("Confirm that the shuttle is ready for takeoff."); });
-
+//change background color from green to blue//
+let backgroundColor= document.querySelector("#shuttleBackground");
+document.querySelector("#shuttleBackground").style.background= "blue";
+    console.log(backgroundColor);
 // Remember to pay attention to page loading!
 });
 // function handleClick("Ready") {
@@ -21,3 +25,6 @@ document.getElementById("takeoff").addEventListener("click",function(){alert("Co
 // // onclick="handleClick('color')"
 // // onclick = "handleClick('ready')"
 // <!-- window.addEventListener("click", function handleClick(){}) -->
+
+// document.getElementById("shuttleBackground").addEventListener("takeOff", function(element) {
+//     element.style="background-color:blue;"
